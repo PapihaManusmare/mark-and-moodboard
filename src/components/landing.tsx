@@ -15,10 +15,12 @@ import {
   Wand2,
 } from "lucide-react";
 import logoAsset from "@/assets/snapcut-logo.png.asset.json";
+import logoMark from "@/assets/snapcut-mark.png.asset.json";
 import demoOriginal from "@/assets/demo-original.png";
 import demoCutout from "@/assets/demo-cutout.png";
 
 const LOGO_URL = logoAsset.url;
+const LOGO_MARK_URL = logoMark.url;
 
 const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp"];
 const MAX_SIZE_MB = 10;
@@ -27,8 +29,11 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="/" className="flex items-center gap-3">
-          <img src={LOGO_URL} alt="SnapCut AI logo" className="h-10 w-auto" />
+        <a href="/" className="flex items-center gap-2.5">
+          <img src={LOGO_MARK_URL} alt="SnapCut AI mark" className="size-10" />
+          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+            SnapCut <span className="text-gradient">AI</span>
+          </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#demo" className="transition-colors hover:text-foreground">
